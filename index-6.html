@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Ananda Yudhi P</title>
+    <style>
+        /* Gaya Umum */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0d1a26;
+            color: #00ff41;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        /* Tema Robot */
+        .robot-theme-header {
+            background: #0a111a;
+            padding: 1rem 0;
+            border-bottom: 2px solid #00ff41;
+        }
+
+        .robot-theme-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .robot-theme-nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .robot-theme-nav a:hover {
+            color: #00ff41;
+        }
+
+        .robot-title {
+            text-align: center;
+            color: #00ff41;
+            text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41;
+            animation: neon-glow 1.5s infinite alternate;
+        }
+
+        .robot-text {
+            text-align: center;
+            color: #d1d1d1;
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+
+        .label {
+            color: #00ff41;
+            font-weight: bold;
+        }
+
+        .robot-footer {
+            background: #0a111a;
+            color: #777;
+            text-align: center;
+            padding: 1rem 0;
+            border-top: 2px solid #00ff41;
+            margin-top: 2rem;
+        }
+
+        /* Konten Halaman */
+        .page-content {
+            display: none;
+            background-color: #1a2c3a;
+            padding: 2rem;
+            border: 1px solid #00ff41;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        .biodata-section {
+            text-align: center;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            border: 3px solid #00ff41;
+            box-shadow: 0 0 10px #00ff41;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-me {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #0d1a26;
+            border: 1px dashed #00ff41;
+            text-align: left;
+        }
+        
+        .about-me h3 {
+            color: #00ff41;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .proyek-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .proyek-item {
+            background-color: #0d1a26;
+            border: 1px solid #00ff41;
+            padding: 1rem;
+            box-shadow: 0 0 10px #00ff41;
+        }
+
+        .proyek-item h3 {
+            color: #00ff41;
+            margin-top: 0;
+        }
+
+        .prakarya-section {
+            text-align: center;
+        }
+
+        .prakarya-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .prakarya-gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #00ff41;
+            box-shadow: 0 0 10px #00ff41;
+            transition: transform 0.3s;
+        }
+
+        .prakarya-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Animasi */
+        @keyframes neon-glow {
+            from {
+                text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 15px #00ff41;
+            }
+            to {
+                text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="robot-theme-header">
+        <nav class="robot-theme-nav">
+            <a onclick="showPage('biodata')">Biodata</a>
+            <a onclick="showPage('proyek')">Proyek</a>
+            <a onclick="showPage('prakarya')">Prakarya</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="biodata" class="page-content active">
+            <div class="biodata-section">
+                <img src="poto.png.jpg"  width="100px" height="200px" alt="ananda" class="profile-photo">
+                <h1 class="robot-title">Ananda Yudhi P</h1>
+                <p class="robot-text">
+                    <span class="label">Alamat:</span> Peron, Sukorejo, Kendal<br>
+                    <span class="label">Lahir:</span> Kendal
+                </p>
+            </div>
+            <div class="about-me">
+                <h3>Tentang Saya</h3>
+                <p>
+                    Halo! Nama saya Ananda Yudhi P. Saya adalah seorang web developer dan penggemar teknologi yang bersemangat. Saya memiliki minat besar dalam menciptakan solusi digital yang kreatif dan fungsional. Saya suka belajar hal-hal baru dan terus mengasah keterampilan saya di bidang pemrograman, desain, dan inovasi.
+                </p>
+                <p>
+                    Dalam portofolio ini, Anda akan menemukan beberapa proyek dan karya yang telah saya kerjakan. Saya percaya bahwa setiap proyek adalah kesempatan untuk berkembang dan memberikan dampak positif.
+                </p>
+            </div>
+        </section>
+
+        <section id="proyek" class="page-content">
+            <div class="proyek-section">
+                <h2 class="robot-title">Proyek Saya</h2>
+                <div class="proyek-list">
+                    <div class="proyek-item">
+                        <h3>Proyek 1</h3>
+                        <p>coming soon.</p>
+                    </div>
+                    <div class="proyek-item">
+                        <h3>Proyek 2</h3>
+                        <p>coming soon.</p>
+                    </div>
+                    <div class="proyek-item">
+                        <h3>Proyek 3</h3>
+                        <p>coming soon.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prakarya" class="page-content">
+            <div class="prakarya-section">
+                <h2 class="robot-title">Prakarya</h2>
+                <p class="robot-text">Halaman ini bisa Anda gunakan untuk menampilkan karya-karya lain di luar proyek utama, seperti desain, tulisan, atau karya seni.</p>
+                <div class="prakarya-gallery">
+                    <img src="https://via.placeholder.com/200" alt="Prakarya 1">
+                    <img src="l" alt="Prakarya 2">
+                    <img src="Logo Hewan.jpg" alt="Prakarya 3">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="robot-footer">
+        <p>&copy; 2025 Ananda Yudhi P. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Sembunyikan semua halaman
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Tampilkan halaman yang dipilih
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.add('active');
+            }
+        }
+
+        // Tampilkan halaman biodata secara default saat pertama kali dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('biodata');
+        });
+    </script>
+
+</body>
+</html>
